@@ -1,5 +1,6 @@
 <?php
-include 'crud.php';
+require 'crud.php';
+// check if there is get_id in get variable and if not empty then call function getStudentFromDb().
 if (isset($_GET['get_id']) && !empty($_GET['get_id'])) {
   $student = getStudentFromDb($_GET['get_id']);
   $row = mysqli_fetch_array($student);
